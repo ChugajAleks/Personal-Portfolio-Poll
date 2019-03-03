@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    --cover-top-padding: 0vh;
+    --cover-bottom-padding: 0vh;
+    --cover-color: rgb(206, 123, 40);
+    --title-font: 'Amatic SC', cursive;
+}
+body{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+h1, h2{
+    font-family: var(--title-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+}
+h1{
+    text-align: right;
+    padding: 0px; 
+}
+h2{
+    color: #444A4F;
+}
+p{
+    font-size: 1rem;
+}
+#navbar{
+    position: fixed;
+    top:0;
+    z-index: 3;
+    height: 5vh;
+    width: 100%;
+    max-width: 1280px;
+    background-color: var(--cover-color);
+    border-bottom-left-radius: 150px 10px;
+    border-bottom-right-radius: 150px 10px;
+    box-shadow: 10px 10px 10px  rgba(140, 85, 56, 0.5);
+}
+.nav-links{
+    float: right;
+    padding-top: 5px;
+    padding-right: 20px;
+}
+.nav-links a{
+    color: #006381;
+    padding-right: 15px;
+    font-size: 2.5vh;
+}
+.nav-links a:hover{
+    text-decoration-line: underline;
+    text-decoration-color: rgba(140, 85, 56, 1);
+}
+.cover{
+    position: relative;
+    background: no-repeat center url("/img/cover-img.jpg");
+    background-size: cover;
+    background-clip: content-box;
+    padding-top: var(--cover-top-padding);
+    padding-bottom: var(--cover-bottom-padding);
+    max-width: 1280px;
+    width: 100%;
+    height: calc(100vh - (var(--cover-top-padding) + var(--cover-bottom-padding)));
+    box-shadow: 10px 10px 10px  rgba(140, 85, 56, 0.5);
+}
+.cover-text{
+    font-family: 'Clicker Script', cursive;
+    font-size: 3vh;
+    color: #4E555B;
+}
+.cover-text-angle{
+    transform: rotate(0deg);
+}
+.cover-top-text{
+    position: absolute;
+    top: 5vh;
+    left: 2vw;
+    width: 80%;
+}
+.cover-bottom-text{
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+    z-index: 2;
+    text-align: right;
+    width: 90%;
+}
+.cover-center-text{
+    position: absolute;
+    top: 19vh;
+    right: 5vw;
+    text-align: right;
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #EB9033;
+}
+.about-background{
+    width: 100%;
+    height: 40vh;
+    background: no-repeat center url(/img/about-back.jpg);
+    background-size: cover;
+}
+.about{
+    position: relative;
+    top: -20vh;
+    /* left: 20%; */
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: -20vh;
+    height: 50vh;
+    background: no-repeat center url(/img/about-img.jpg);
+    background-size: cover;
+    box-shadow: 10px 10px 10px  rgba(140, 85, 56, 0.5);
+}
+.about p{
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 50%;
+    /* padding: 0 5% 10% 0; */
+    text-indent: 15%;
+    line-height: 1.4;
+    font-size: 1.1rem;
+    color: #444A4F;
+}
+.about .social{
+    position: absolute;
+    top: 90%;
+    /* bottom: 10%; */
+    left: 40%;
+    text-align: right;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    padding: 0;
+}
+.galeray{
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444A4F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.galeray :first-child>p{
+    padding-top: 40px;
+}
+.slide{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    /* background-color:#FFA54B; */
+    background-color:rgb(238, 162, 1);
+    box-shadow: 10px 10px 10px  rgba(140, 85, 56, 0.5);
+}
+.slide-img{
+    margin: 10px auto;
+    width: 90%;
+    transition: 0.5s;
+}
+.slide-img:hover{
+    width: 95%;
+    transition: 0.5s;
+}
+.slide-img img{
+    width: 100%;
+}
+.clients{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    background-color:  rgb(206, 123, 40);
+    box-shadow: 10px 10px 10px  rgba(140, 85, 56, 0.5);
+}
+.client{
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    
+}
+.client img{
+    width: 100%;
+    border: 5px solid #FFA54B;
+    border-radius: 100%;
+}
+
+.contact{
+    background: no-repeat center url(/img/footer.jpg);
+    background-size: cover;
+    box-shadow: 10px 10px 10px  rgba(140, 85, 56, 0.5);
+}
+.contact p{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+.contact-items{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.contact-link{
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 20px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 6px solid #FFA54B;
+    border-radius: 100%;
+    background-color: rgba(140, 85, 56, 0.781);
+    transition: 0.5s;
+}
+.contact-link:hover{
+    border: 6px solid #444A4F;
+    box-shadow: 5px 5px 5px  rgba(140, 85, 56, 0.5);
+    transition: 0.5s;
+}
+@media (orientation: landscape){
+    .nav-links{
+        float: right;
+        padding-top: 0.6vh;
+        padding-right: 70px;
+    }
+    .cover-text{
+        font-size: 4vh;
+    }
+    .cover-bottom-text{
+        text-indent: 30%;
+    }
+}
+@media (min-width: 540px){
+
+    h1{
+        font-size: 2rem;
+    }
+    .about{
+        height: 100vh;
+    }
+    .contact{
+        height: 300px;
+    }
+}
+@media (min-width: 768px){
+    .cover-text{
+        font-size: 4vh;
+    }
+    .cover-top-text{
+        width: 80%
+    }
+    .cover-bottom-text{
+        width: 88%
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    
+    .about p{
+        font-size: 1.5rem;
+
+    }
+    .contact{
+        height: 400px;
+    }
+}
+@media (min-width: 1024px){
+    .cover-text{
+        font-size: 4.5vh;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    .about p{
+        font-size: 1.7rem;
+    }
+    .galeray{
+        flex-direction: row;
+        flex-flow: wrap;
+    }
+    .galeray :first-child>p{
+        padding-top: 0px;
+    }
+    .slide{
+        width: 40%;
+    }
+    .slide-img{
+        width: 90%;
+        transition: 0.5s;
+    }
+    .slide-img:hover{
+        width: 93%;
+        transition: 0.5s;
+    }
+    .contact{
+        height: 500px;
+    }
+}
